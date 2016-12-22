@@ -10,6 +10,8 @@
 #import "EditTableViewController.h"
 #import "BlockTestViewController.h"
 #import "LHFWebViewController.h"
+#import "TextTestViewController.h"
+#import "SXFontShowVC.h"
 
 @interface RootTableViewController ()
 {
@@ -23,8 +25,8 @@
 - (instancetype) initWithStyle:(UITableViewStyle)style
 {
     if (self = [super initWithStyle:style]) {
-        _titles = @[@"table编辑",@"block test",@"webview test"];
-        _classNames = @[@"EditTableViewController",@"BlockTestViewController",@"LHFWebViewController"];
+        _titles = @[@"table编辑",@"block test",@"webview test",@"text test",@"all fonts show"];
+        _classNames = @[@"EditTableViewController",@"BlockTestViewController",@"LHFWebViewController",@"TextTestViewController",@"SXFontShowVC"];
     }
     return self;
 }

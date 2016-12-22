@@ -19,6 +19,8 @@
 		37BF3C901BE75B2300CFB19A /* LHFDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BF3C8F1BE75B2300CFB19A /* LHFDemoUITests.m */; };
 		37BF3C9F1BE75B5300CFB19A /* RootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BF3C9E1BE75B5300CFB19A /* RootTableViewController.m */; };
 		37C3AE191D78251900BC9ECA /* BlockTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C3AE181D78251900BC9ECA /* BlockTestViewController.m */; };
+		37E854EF1E0BA4BE00E2F48C /* TextTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E854EE1E0BA4BE00E2F48C /* TextTestViewController.m */; };
+		37E854F21E0BB6D300E2F48C /* SXFontShowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E854F11E0BB6D300E2F48C /* SXFontShowVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,10 @@
 		37BF3C9E1BE75B5300CFB19A /* RootTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTableViewController.m; sourceTree = "<group>"; };
 		37C3AE171D78251900BC9ECA /* BlockTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockTestViewController.h; sourceTree = "<group>"; };
 		37C3AE181D78251900BC9ECA /* BlockTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockTestViewController.m; sourceTree = "<group>"; };
+		37E854ED1E0BA4BE00E2F48C /* TextTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextTestViewController.h; sourceTree = "<group>"; };
+		37E854EE1E0BA4BE00E2F48C /* TextTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextTestViewController.m; sourceTree = "<group>"; };
+		37E854F01E0BB6D300E2F48C /* SXFontShowVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXFontShowVC.h; sourceTree = "<group>"; };
+		37E854F11E0BB6D300E2F48C /* SXFontShowVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXFontShowVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +131,10 @@
 				37807B401DDD5F7900176078 /* LHFWebViewController.m */,
 				37807B421DDEB0EE00176078 /* WebSocketViewController.h */,
 				37807B431DDEB0EE00176078 /* WebSocketViewController.m */,
+				37E854ED1E0BA4BE00E2F48C /* TextTestViewController.h */,
+				37E854EE1E0BA4BE00E2F48C /* TextTestViewController.m */,
+				37E854F01E0BB6D300E2F48C /* SXFontShowVC.h */,
+				37E854F11E0BB6D300E2F48C /* SXFontShowVC.m */,
 				37BF3C731BE75B2300CFB19A /* Main.storyboard */,
 				37BF3C761BE75B2300CFB19A /* Assets.xcassets */,
 				37BF3C781BE75B2300CFB19A /* LaunchScreen.storyboard */,
@@ -294,9 +304,11 @@
 				37C3AE191D78251900BC9ECA /* BlockTestViewController.m in Sources */,
 				3710B9DD1D61AD4600DF7D2D /* EditTableViewController.m in Sources */,
 				37BF3C6F1BE75B2300CFB19A /* AppDelegate.m in Sources */,
+				37E854F21E0BB6D300E2F48C /* SXFontShowVC.m in Sources */,
 				37BF3C6C1BE75B2300CFB19A /* main.m in Sources */,
 				37807B441DDEB0EE00176078 /* WebSocketViewController.m in Sources */,
 				37BF3C9F1BE75B5300CFB19A /* RootTableViewController.m in Sources */,
+				37E854EF1E0BA4BE00E2F48C /* TextTestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
