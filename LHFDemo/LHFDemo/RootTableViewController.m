@@ -7,11 +7,9 @@
 //
 
 #import "RootTableViewController.h"
-#import "LHFMVPDemoViewController.h"
 #import "EditTableViewController.h"
 #import "BlockTestViewController.h"
 #import "LHFWebViewController.h"
-#import "ScrollViewController.h"
 
 @interface RootTableViewController ()
 {
@@ -25,8 +23,8 @@
 - (instancetype) initWithStyle:(UITableViewStyle)style
 {
     if (self = [super initWithStyle:style]) {
-        _titles = @[@"scroll view",@"MPV Demo",@"table编辑",@"block test",@"webview test"];
-        _classNames = @[@"ScrollViewController",@"LHFMVPDemoViewController",@"EditTableViewController",@"BlockTestViewController",@"LHFWebViewController"];
+        _titles = @[@"table编辑",@"block test",@"webview test"];
+        _classNames = @[@"EditTableViewController",@"BlockTestViewController",@"LHFWebViewController"];
     }
     return self;
 }
@@ -72,13 +70,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
+    UIViewController *controller ;
     if (indexPath.row < _classNames.count) {
-        [self.navigationController pushViewController:[[LHFMVPDemoViewController alloc] init] animated:YES];
-
-//        UIViewController *controller = [[NSClassFromString(_classNames[indexPath.row]) alloc] init];
-//        [self.navigationController pushViewController:controller animated:YES];
+        controller = [[NSClassFromString(_classNames[indexPath.row]) alloc] initWithNibName:nil bundle:nil];
     }
+    [self.navigationController pushViewController:controller animated:NO];
 }
 
 

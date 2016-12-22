@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3710B9DD1D61AD4600DF7D2D /* EditTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3710B9DC1D61AD4600DF7D2D /* EditTableViewController.m */; };
-		374FD4391DFFEC34000A5787 /* ScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 374FD4381DFFEC34000A5787 /* ScrollViewController.m */; };
 		37807B411DDD5F7900176078 /* LHFWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37807B401DDD5F7900176078 /* LHFWebViewController.m */; };
 		37807B441DDEB0EE00176078 /* WebSocketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37807B431DDEB0EE00176078 /* WebSocketViewController.m */; };
 		37BF3C6C1BE75B2300CFB19A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BF3C6B1BE75B2300CFB19A /* main.m */; };
@@ -19,10 +18,6 @@
 		37BF3C851BE75B2300CFB19A /* LHFDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BF3C841BE75B2300CFB19A /* LHFDemoTests.m */; };
 		37BF3C901BE75B2300CFB19A /* LHFDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BF3C8F1BE75B2300CFB19A /* LHFDemoUITests.m */; };
 		37BF3C9F1BE75B5300CFB19A /* RootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BF3C9E1BE75B5300CFB19A /* RootTableViewController.m */; };
-		37BF3CA61BE75EF000CFB19A /* LHFMVPDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BF3CA51BE75EF000CFB19A /* LHFMVPDemoViewController.m */; };
-		37BF3CA91BE75F0D00CFB19A /* LHFMVPDemoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BF3CA81BE75F0D00CFB19A /* LHFMVPDemoModel.m */; };
-		37BF3CAC1BE760D400CFB19A /* LHFMVPDemoPesrsonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BF3CAB1BE760D400CFB19A /* LHFMVPDemoPesrsonView.m */; };
-		37BF3CB01BE763AB00CFB19A /* LHFMVPDemoPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BF3CAF1BE763AB00CFB19A /* LHFMVPDemoPresenter.m */; };
 		37C3AE191D78251900BC9ECA /* BlockTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C3AE181D78251900BC9ECA /* BlockTestViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -46,8 +41,6 @@
 /* Begin PBXFileReference section */
 		3710B9DB1D61AD4600DF7D2D /* EditTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditTableViewController.h; sourceTree = "<group>"; };
 		3710B9DC1D61AD4600DF7D2D /* EditTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditTableViewController.m; sourceTree = "<group>"; };
-		374FD4371DFFEC34000A5787 /* ScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewController.h; sourceTree = "<group>"; };
-		374FD4381DFFEC34000A5787 /* ScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewController.m; sourceTree = "<group>"; };
 		37807B3F1DDD5F7900176078 /* LHFWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHFWebViewController.h; sourceTree = "<group>"; };
 		37807B401DDD5F7900176078 /* LHFWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHFWebViewController.m; sourceTree = "<group>"; };
 		37807B421DDEB0EE00176078 /* WebSocketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebSocketViewController.h; sourceTree = "<group>"; };
@@ -68,15 +61,6 @@
 		37BF3C911BE75B2300CFB19A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37BF3C9D1BE75B5300CFB19A /* RootTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTableViewController.h; sourceTree = "<group>"; };
 		37BF3C9E1BE75B5300CFB19A /* RootTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTableViewController.m; sourceTree = "<group>"; };
-		37BF3CA41BE75EF000CFB19A /* LHFMVPDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHFMVPDemoViewController.h; sourceTree = "<group>"; };
-		37BF3CA51BE75EF000CFB19A /* LHFMVPDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHFMVPDemoViewController.m; sourceTree = "<group>"; };
-		37BF3CA71BE75F0D00CFB19A /* LHFMVPDemoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHFMVPDemoModel.h; sourceTree = "<group>"; };
-		37BF3CA81BE75F0D00CFB19A /* LHFMVPDemoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHFMVPDemoModel.m; sourceTree = "<group>"; };
-		37BF3CAA1BE760D400CFB19A /* LHFMVPDemoPesrsonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHFMVPDemoPesrsonView.h; sourceTree = "<group>"; };
-		37BF3CAB1BE760D400CFB19A /* LHFMVPDemoPesrsonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHFMVPDemoPesrsonView.m; sourceTree = "<group>"; };
-		37BF3CAD1BE7621000CFB19A /* LHFMVPPersonProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHFMVPPersonProtocol.h; sourceTree = "<group>"; };
-		37BF3CAE1BE763AB00CFB19A /* LHFMVPDemoPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHFMVPDemoPresenter.h; sourceTree = "<group>"; };
-		37BF3CAF1BE763AB00CFB19A /* LHFMVPDemoPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHFMVPDemoPresenter.m; sourceTree = "<group>"; };
 		37C3AE171D78251900BC9ECA /* BlockTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockTestViewController.h; sourceTree = "<group>"; };
 		37C3AE181D78251900BC9ECA /* BlockTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockTestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,9 +125,6 @@
 				37807B401DDD5F7900176078 /* LHFWebViewController.m */,
 				37807B421DDEB0EE00176078 /* WebSocketViewController.h */,
 				37807B431DDEB0EE00176078 /* WebSocketViewController.m */,
-				374FD4371DFFEC34000A5787 /* ScrollViewController.h */,
-				374FD4381DFFEC34000A5787 /* ScrollViewController.m */,
-				37BF3CA31BE75EF000CFB19A /* MVPDemo */,
 				37BF3C731BE75B2300CFB19A /* Main.storyboard */,
 				37BF3C761BE75B2300CFB19A /* Assets.xcassets */,
 				37BF3C781BE75B2300CFB19A /* LaunchScreen.storyboard */,
@@ -177,22 +158,6 @@
 				37BF3C911BE75B2300CFB19A /* Info.plist */,
 			);
 			path = LHFDemoUITests;
-			sourceTree = "<group>";
-		};
-		37BF3CA31BE75EF000CFB19A /* MVPDemo */ = {
-			isa = PBXGroup;
-			children = (
-				37BF3CA41BE75EF000CFB19A /* LHFMVPDemoViewController.h */,
-				37BF3CA51BE75EF000CFB19A /* LHFMVPDemoViewController.m */,
-				37BF3CA71BE75F0D00CFB19A /* LHFMVPDemoModel.h */,
-				37BF3CA81BE75F0D00CFB19A /* LHFMVPDemoModel.m */,
-				37BF3CAD1BE7621000CFB19A /* LHFMVPPersonProtocol.h */,
-				37BF3CAE1BE763AB00CFB19A /* LHFMVPDemoPresenter.h */,
-				37BF3CAF1BE763AB00CFB19A /* LHFMVPDemoPresenter.m */,
-				37BF3CAA1BE760D400CFB19A /* LHFMVPDemoPesrsonView.h */,
-				37BF3CAB1BE760D400CFB19A /* LHFMVPDemoPesrsonView.m */,
-			);
-			path = MVPDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,17 +291,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				37807B411DDD5F7900176078 /* LHFWebViewController.m in Sources */,
-				37BF3CA91BE75F0D00CFB19A /* LHFMVPDemoModel.m in Sources */,
 				37C3AE191D78251900BC9ECA /* BlockTestViewController.m in Sources */,
-				374FD4391DFFEC34000A5787 /* ScrollViewController.m in Sources */,
 				3710B9DD1D61AD4600DF7D2D /* EditTableViewController.m in Sources */,
 				37BF3C6F1BE75B2300CFB19A /* AppDelegate.m in Sources */,
 				37BF3C6C1BE75B2300CFB19A /* main.m in Sources */,
-				37BF3CB01BE763AB00CFB19A /* LHFMVPDemoPresenter.m in Sources */,
-				37BF3CA61BE75EF000CFB19A /* LHFMVPDemoViewController.m in Sources */,
 				37807B441DDEB0EE00176078 /* WebSocketViewController.m in Sources */,
 				37BF3C9F1BE75B5300CFB19A /* RootTableViewController.m in Sources */,
-				37BF3CAC1BE760D400CFB19A /* LHFMVPDemoPesrsonView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
