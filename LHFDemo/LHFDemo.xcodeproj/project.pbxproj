@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3710B9DD1D61AD4600DF7D2D /* EditTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3710B9DC1D61AD4600DF7D2D /* EditTableViewController.m */; };
+		3763FFA21E13B01400A810D2 /* LHFStrongLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3763FFA11E13B01400A810D2 /* LHFStrongLabel.m */; };
 		37807B411DDD5F7900176078 /* LHFWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37807B401DDD5F7900176078 /* LHFWebViewController.m */; };
 		37807B441DDEB0EE00176078 /* WebSocketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37807B431DDEB0EE00176078 /* WebSocketViewController.m */; };
 		37BF3C6C1BE75B2300CFB19A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BF3C6B1BE75B2300CFB19A /* main.m */; };
@@ -43,6 +44,8 @@
 /* Begin PBXFileReference section */
 		3710B9DB1D61AD4600DF7D2D /* EditTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditTableViewController.h; sourceTree = "<group>"; };
 		3710B9DC1D61AD4600DF7D2D /* EditTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditTableViewController.m; sourceTree = "<group>"; };
+		3763FFA01E13B01400A810D2 /* LHFStrongLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHFStrongLabel.h; sourceTree = "<group>"; };
+		3763FFA11E13B01400A810D2 /* LHFStrongLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHFStrongLabel.m; sourceTree = "<group>"; };
 		37807B3F1DDD5F7900176078 /* LHFWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHFWebViewController.h; sourceTree = "<group>"; };
 		37807B401DDD5F7900176078 /* LHFWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHFWebViewController.m; sourceTree = "<group>"; };
 		37807B421DDEB0EE00176078 /* WebSocketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebSocketViewController.h; sourceTree = "<group>"; };
@@ -133,6 +136,8 @@
 				37807B431DDEB0EE00176078 /* WebSocketViewController.m */,
 				37E854ED1E0BA4BE00E2F48C /* TextTestViewController.h */,
 				37E854EE1E0BA4BE00E2F48C /* TextTestViewController.m */,
+				3763FFA01E13B01400A810D2 /* LHFStrongLabel.h */,
+				3763FFA11E13B01400A810D2 /* LHFStrongLabel.m */,
 				37E854F01E0BB6D300E2F48C /* SXFontShowVC.h */,
 				37E854F11E0BB6D300E2F48C /* SXFontShowVC.m */,
 				37BF3C731BE75B2300CFB19A /* Main.storyboard */,
@@ -237,6 +242,7 @@
 				TargetAttributes = {
 					37BF3C661BE75B2300CFB19A = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = C6FYK5JX7E;
 					};
 					37BF3C7F1BE75B2300CFB19A = {
 						CreatedOnToolsVersion = 7.1;
@@ -300,6 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3763FFA21E13B01400A810D2 /* LHFStrongLabel.m in Sources */,
 				37807B411DDD5F7900176078 /* LHFWebViewController.m in Sources */,
 				37C3AE191D78251900BC9ECA /* BlockTestViewController.m in Sources */,
 				3710B9DD1D61AD4600DF7D2D /* EditTableViewController.m in Sources */,
@@ -447,6 +454,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = C6FYK5JX7E;
 				INFOPLIST_FILE = LHFDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LHFDemo.LHFDemo;
@@ -458,6 +466,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = C6FYK5JX7E;
 				INFOPLIST_FILE = LHFDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LHFDemo.LHFDemo;
