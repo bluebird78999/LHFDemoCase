@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3710B9DD1D61AD4600DF7D2D /* EditTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3710B9DC1D61AD4600DF7D2D /* EditTableViewController.m */; };
+		37436AF81E8913B90033ECF7 /* LHFRecyleSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37436AF71E8913B90033ECF7 /* LHFRecyleSliderView.m */; };
 		3763FFA21E13B01400A810D2 /* LHFStrongLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3763FFA11E13B01400A810D2 /* LHFStrongLabel.m */; };
 		37807B411DDD5F7900176078 /* LHFWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37807B401DDD5F7900176078 /* LHFWebViewController.m */; };
 		37807B441DDEB0EE00176078 /* WebSocketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37807B431DDEB0EE00176078 /* WebSocketViewController.m */; };
@@ -22,6 +23,8 @@
 		37C3AE191D78251900BC9ECA /* BlockTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C3AE181D78251900BC9ECA /* BlockTestViewController.m */; };
 		37E854EF1E0BA4BE00E2F48C /* TextTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E854EE1E0BA4BE00E2F48C /* TextTestViewController.m */; };
 		37E854F21E0BB6D300E2F48C /* SXFontShowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E854F11E0BB6D300E2F48C /* SXFontShowVC.m */; };
+		C3DC7D9CFC12344610D1C86E /* libPods-LHFDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DCC8B91FB3D7C29B594B59 /* libPods-LHFDemo.a */; };
+		E3E6575B915228C52F78152A /* libPods-LHFDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 656E50AED8DC53C906804469 /* libPods-LHFDemoTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +45,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06DCC8B91FB3D7C29B594B59 /* libPods-LHFDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LHFDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3710B9DB1D61AD4600DF7D2D /* EditTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditTableViewController.h; sourceTree = "<group>"; };
 		3710B9DC1D61AD4600DF7D2D /* EditTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditTableViewController.m; sourceTree = "<group>"; };
+		37436AF61E8913B90033ECF7 /* LHFRecyleSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHFRecyleSliderView.h; sourceTree = "<group>"; };
+		37436AF71E8913B90033ECF7 /* LHFRecyleSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHFRecyleSliderView.m; sourceTree = "<group>"; };
 		3763FFA01E13B01400A810D2 /* LHFStrongLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHFStrongLabel.h; sourceTree = "<group>"; };
 		3763FFA11E13B01400A810D2 /* LHFStrongLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHFStrongLabel.m; sourceTree = "<group>"; };
 		37807B3F1DDD5F7900176078 /* LHFWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHFWebViewController.h; sourceTree = "<group>"; };
@@ -72,6 +78,11 @@
 		37E854EE1E0BA4BE00E2F48C /* TextTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextTestViewController.m; sourceTree = "<group>"; };
 		37E854F01E0BB6D300E2F48C /* SXFontShowVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXFontShowVC.h; sourceTree = "<group>"; };
 		37E854F11E0BB6D300E2F48C /* SXFontShowVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXFontShowVC.m; sourceTree = "<group>"; };
+		656E50AED8DC53C906804469 /* libPods-LHFDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LHFDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		71C16F62D206BBBF8B4413E7 /* Pods-LHFDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LHFDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-LHFDemo/Pods-LHFDemo.release.xcconfig"; sourceTree = "<group>"; };
+		9244F923D4518D0CCF976F24 /* Pods-LHFDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LHFDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LHFDemo/Pods-LHFDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		F575E03C260B41A073353B75 /* Pods-LHFDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LHFDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LHFDemoTests/Pods-LHFDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FD24AC7E86675B0D20232D37 /* Pods-LHFDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LHFDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LHFDemoTests/Pods-LHFDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3DC7D9CFC12344610D1C86E /* libPods-LHFDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3E6575B915228C52F78152A /* libPods-LHFDemoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +112,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03F8C0DB5EEE4D47733C97C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06DCC8B91FB3D7C29B594B59 /* libPods-LHFDemo.a */,
+				656E50AED8DC53C906804469 /* libPods-LHFDemoTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		37BF3C5E1BE75B2300CFB19A = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +128,8 @@
 				37BF3C831BE75B2300CFB19A /* LHFDemoTests */,
 				37BF3C8E1BE75B2300CFB19A /* LHFDemoUITests */,
 				37BF3C681BE75B2300CFB19A /* Products */,
+				FF24E2DBFEBF0BB5C7DACAC7 /* Pods */,
+				03F8C0DB5EEE4D47733C97C2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +164,8 @@
 				3763FFA11E13B01400A810D2 /* LHFStrongLabel.m */,
 				37E854F01E0BB6D300E2F48C /* SXFontShowVC.h */,
 				37E854F11E0BB6D300E2F48C /* SXFontShowVC.m */,
+				37436AF61E8913B90033ECF7 /* LHFRecyleSliderView.h */,
+				37436AF71E8913B90033ECF7 /* LHFRecyleSliderView.m */,
 				37BF3C731BE75B2300CFB19A /* Main.storyboard */,
 				37BF3C761BE75B2300CFB19A /* Assets.xcassets */,
 				37BF3C781BE75B2300CFB19A /* LaunchScreen.storyboard */,
@@ -175,6 +201,17 @@
 			path = LHFDemoUITests;
 			sourceTree = "<group>";
 		};
+		FF24E2DBFEBF0BB5C7DACAC7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9244F923D4518D0CCF976F24 /* Pods-LHFDemo.debug.xcconfig */,
+				71C16F62D206BBBF8B4413E7 /* Pods-LHFDemo.release.xcconfig */,
+				F575E03C260B41A073353B75 /* Pods-LHFDemoTests.debug.xcconfig */,
+				FD24AC7E86675B0D20232D37 /* Pods-LHFDemoTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -182,9 +219,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37BF3C941BE75B2300CFB19A /* Build configuration list for PBXNativeTarget "LHFDemo" */;
 			buildPhases = (
+				437FFAACDAAD1306D5131531 /* [CP] Check Pods Manifest.lock */,
 				37BF3C631BE75B2300CFB19A /* Sources */,
 				37BF3C641BE75B2300CFB19A /* Frameworks */,
 				37BF3C651BE75B2300CFB19A /* Resources */,
+				25D2CD153628CD22B94351CB /* [CP] Embed Pods Frameworks */,
+				C34D5D1C5DF8270175032E58 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,9 +239,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37BF3C971BE75B2300CFB19A /* Build configuration list for PBXNativeTarget "LHFDemoTests" */;
 			buildPhases = (
+				23B656636B3B57A1460749B2 /* [CP] Check Pods Manifest.lock */,
 				37BF3C7C1BE75B2300CFB19A /* Sources */,
 				37BF3C7D1BE75B2300CFB19A /* Frameworks */,
 				37BF3C7E1BE75B2300CFB19A /* Resources */,
+				BACAC2E30ADD035DB8065C44 /* [CP] Embed Pods Frameworks */,
+				0C6CE99037E38ACF26D175F8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -242,7 +285,8 @@
 				TargetAttributes = {
 					37BF3C661BE75B2300CFB19A = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = C6FYK5JX7E;
+						DevelopmentTeam = 5PB97NTX5H;
+						ProvisioningStyle = Automatic;
 					};
 					37BF3C7F1BE75B2300CFB19A = {
 						CreatedOnToolsVersion = 7.1;
@@ -301,6 +345,99 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0C6CE99037E38ACF26D175F8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LHFDemoTests/Pods-LHFDemoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		23B656636B3B57A1460749B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		25D2CD153628CD22B94351CB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LHFDemo/Pods-LHFDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		437FFAACDAAD1306D5131531 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BACAC2E30ADD035DB8065C44 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LHFDemoTests/Pods-LHFDemoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C34D5D1C5DF8270175032E58 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LHFDemo/Pods-LHFDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		37BF3C631BE75B2300CFB19A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -312,6 +449,7 @@
 				3710B9DD1D61AD4600DF7D2D /* EditTableViewController.m in Sources */,
 				37BF3C6F1BE75B2300CFB19A /* AppDelegate.m in Sources */,
 				37E854F21E0BB6D300E2F48C /* SXFontShowVC.m in Sources */,
+				37436AF81E8913B90033ECF7 /* LHFRecyleSliderView.m in Sources */,
 				37BF3C6C1BE75B2300CFB19A /* main.m in Sources */,
 				37807B441DDEB0EE00176078 /* WebSocketViewController.m in Sources */,
 				37BF3C9F1BE75B5300CFB19A /* RootTableViewController.m in Sources */,
@@ -452,10 +590,13 @@
 		};
 		37BF3C951BE75B2300CFB19A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9244F923D4518D0CCF976F24 /* Pods-LHFDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = C6FYK5JX7E;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 5PB97NTX5H;
 				INFOPLIST_FILE = LHFDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LHFDemo.LHFDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -464,10 +605,13 @@
 		};
 		37BF3C961BE75B2300CFB19A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71C16F62D206BBBF8B4413E7 /* Pods-LHFDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = C6FYK5JX7E;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 5PB97NTX5H;
 				INFOPLIST_FILE = LHFDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LHFDemo.LHFDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -476,6 +620,7 @@
 		};
 		37BF3C981BE75B2300CFB19A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F575E03C260B41A073353B75 /* Pods-LHFDemoTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = LHFDemoTests/Info.plist;
@@ -488,6 +633,7 @@
 		};
 		37BF3C991BE75B2300CFB19A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD24AC7E86675B0D20232D37 /* Pods-LHFDemoTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = LHFDemoTests/Info.plist;

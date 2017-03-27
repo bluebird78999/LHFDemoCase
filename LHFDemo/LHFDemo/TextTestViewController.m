@@ -36,8 +36,9 @@
     NSLog(@"textView1.font.lineHeight:%f textView2.font.lineHeight:%f",textView1.font.lineHeight,textView2.font.lineHeight);
     
     LHFStrongLabel *textView3 = [[LHFStrongLabel alloc] initWithFrame:CGRectMake(100, 300, 100, 30)];
-    textView3.text = @"长按复制文本";
-    textView3.font = [UIFont systemFontOfSize:12];
+    textView3.text = @"长按复制文本长按复制文本长按复制文本长按复制文本长按复制文本长按复制文本长按复制文本长按复制文本";
+    textView3.numberOfLines = 2;
+    textView3.font = [UIFont systemFontOfSize:20];
     textView3.backgroundColor = [UIColor grayColor];
     [self.view addSubview:textView3];
 
