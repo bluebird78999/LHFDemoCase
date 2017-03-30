@@ -12,6 +12,7 @@
 #import "LHFWebViewController.h"
 #import "TextTestViewController.h"
 #import "SXFontShowVC.h"
+#import "LHFRecycleSliderViewController.h"
 
 @interface RootTableViewController ()
 {
@@ -25,8 +26,8 @@
 - (instancetype) initWithStyle:(UITableViewStyle)style
 {
     if (self = [super initWithStyle:style]) {
-        _titles = @[@"table编辑",@"block test",@"webview test",@"text test",@"all fonts show"];
-        _classNames = @[@"EditTableViewController",@"BlockTestViewController",@"LHFWebViewController",@"TextTestViewController",@"SXFontShowVC"];
+        _titles = @[@"table编辑",@"block test",@"webview test",@"text test",@"all fonts show",@"recycle slider"];
+        _classNames = @[@"EditTableViewController",@"BlockTestViewController",@"LHFWebViewController",@"TextTestViewController",@"SXFontShowVC",@"LHFRecycleSliderViewController"];
     }
     return self;
 }

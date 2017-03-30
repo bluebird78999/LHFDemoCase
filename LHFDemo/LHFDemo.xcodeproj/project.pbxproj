@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3710B9DD1D61AD4600DF7D2D /* EditTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3710B9DC1D61AD4600DF7D2D /* EditTableViewController.m */; };
-		37436AF81E8913B90033ECF7 /* LHFRecyleSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37436AF71E8913B90033ECF7 /* LHFRecyleSliderView.m */; };
+		37436AFC1E8919E90033ECF7 /* LHFRecycleSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37436AFB1E8919E90033ECF7 /* LHFRecycleSliderView.m */; };
+		37436AFF1E891A050033ECF7 /* LHFRecycleSliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37436AFE1E891A050033ECF7 /* LHFRecycleSliderViewController.m */; };
+		37436B021E8B646C0033ECF7 /* SliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37436B011E8B646C0033ECF7 /* SliderView.m */; };
 		3763FFA21E13B01400A810D2 /* LHFStrongLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3763FFA11E13B01400A810D2 /* LHFStrongLabel.m */; };
 		37807B411DDD5F7900176078 /* LHFWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37807B401DDD5F7900176078 /* LHFWebViewController.m */; };
 		37807B441DDEB0EE00176078 /* WebSocketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37807B431DDEB0EE00176078 /* WebSocketViewController.m */; };
@@ -48,8 +50,12 @@
 		06DCC8B91FB3D7C29B594B59 /* libPods-LHFDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LHFDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3710B9DB1D61AD4600DF7D2D /* EditTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditTableViewController.h; sourceTree = "<group>"; };
 		3710B9DC1D61AD4600DF7D2D /* EditTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditTableViewController.m; sourceTree = "<group>"; };
-		37436AF61E8913B90033ECF7 /* LHFRecyleSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHFRecyleSliderView.h; sourceTree = "<group>"; };
-		37436AF71E8913B90033ECF7 /* LHFRecyleSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHFRecyleSliderView.m; sourceTree = "<group>"; };
+		37436AFA1E8919E90033ECF7 /* LHFRecycleSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHFRecycleSliderView.h; sourceTree = "<group>"; };
+		37436AFB1E8919E90033ECF7 /* LHFRecycleSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHFRecycleSliderView.m; sourceTree = "<group>"; };
+		37436AFD1E891A050033ECF7 /* LHFRecycleSliderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHFRecycleSliderViewController.h; sourceTree = "<group>"; };
+		37436AFE1E891A050033ECF7 /* LHFRecycleSliderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHFRecycleSliderViewController.m; sourceTree = "<group>"; };
+		37436B001E8B646C0033ECF7 /* SliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderView.h; sourceTree = "<group>"; };
+		37436B011E8B646C0033ECF7 /* SliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderView.m; sourceTree = "<group>"; };
 		3763FFA01E13B01400A810D2 /* LHFStrongLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHFStrongLabel.h; sourceTree = "<group>"; };
 		3763FFA11E13B01400A810D2 /* LHFStrongLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHFStrongLabel.m; sourceTree = "<group>"; };
 		37807B3F1DDD5F7900176078 /* LHFWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHFWebViewController.h; sourceTree = "<group>"; };
@@ -121,6 +127,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		37436AF91E8919E90033ECF7 /* RecyleSliderVIew */ = {
+			isa = PBXGroup;
+			children = (
+				37436B001E8B646C0033ECF7 /* SliderView.h */,
+				37436B011E8B646C0033ECF7 /* SliderView.m */,
+				37436AFA1E8919E90033ECF7 /* LHFRecycleSliderView.h */,
+				37436AFB1E8919E90033ECF7 /* LHFRecycleSliderView.m */,
+				37436AFD1E891A050033ECF7 /* LHFRecycleSliderViewController.h */,
+				37436AFE1E891A050033ECF7 /* LHFRecycleSliderViewController.m */,
+			);
+			path = RecyleSliderVIew;
+			sourceTree = "<group>";
+		};
 		37BF3C5E1BE75B2300CFB19A = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +165,7 @@
 		37BF3C691BE75B2300CFB19A /* LHFDemo */ = {
 			isa = PBXGroup;
 			children = (
+				37436AF91E8919E90033ECF7 /* RecyleSliderVIew */,
 				37BF3C6D1BE75B2300CFB19A /* AppDelegate.h */,
 				37BF3C6E1BE75B2300CFB19A /* AppDelegate.m */,
 				37BF3C9D1BE75B5300CFB19A /* RootTableViewController.h */,
@@ -164,8 +184,6 @@
 				3763FFA11E13B01400A810D2 /* LHFStrongLabel.m */,
 				37E854F01E0BB6D300E2F48C /* SXFontShowVC.h */,
 				37E854F11E0BB6D300E2F48C /* SXFontShowVC.m */,
-				37436AF61E8913B90033ECF7 /* LHFRecyleSliderView.h */,
-				37436AF71E8913B90033ECF7 /* LHFRecyleSliderView.m */,
 				37BF3C731BE75B2300CFB19A /* Main.storyboard */,
 				37BF3C761BE75B2300CFB19A /* Assets.xcassets */,
 				37BF3C781BE75B2300CFB19A /* LaunchScreen.storyboard */,
@@ -449,10 +467,12 @@
 				3710B9DD1D61AD4600DF7D2D /* EditTableViewController.m in Sources */,
 				37BF3C6F1BE75B2300CFB19A /* AppDelegate.m in Sources */,
 				37E854F21E0BB6D300E2F48C /* SXFontShowVC.m in Sources */,
-				37436AF81E8913B90033ECF7 /* LHFRecyleSliderView.m in Sources */,
+				37436AFC1E8919E90033ECF7 /* LHFRecycleSliderView.m in Sources */,
 				37BF3C6C1BE75B2300CFB19A /* main.m in Sources */,
 				37807B441DDEB0EE00176078 /* WebSocketViewController.m in Sources */,
 				37BF3C9F1BE75B5300CFB19A /* RootTableViewController.m in Sources */,
+				37436AFF1E891A050033ECF7 /* LHFRecycleSliderViewController.m in Sources */,
+				37436B021E8B646C0033ECF7 /* SliderView.m in Sources */,
 				37E854EF1E0BA4BE00E2F48C /* TextTestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
