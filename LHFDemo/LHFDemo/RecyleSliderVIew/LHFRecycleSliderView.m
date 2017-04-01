@@ -76,12 +76,12 @@ NS_ASSUME_NONNULL_END
     _scrollView.delegate = self;//设置代理
     [_scrollView setContentOffset:CGPointMake(ScrollWidth, 0)];//将起始点定义到第二张图
     [_scrollView setContentSize:CGSizeMake(ScrollWidth * (_views.count + 2), 0)];
-    _scrollView.backgroundColor = [UIColor redColor];
+    _scrollView.backgroundColor = [UIColor whiteColor];
     _scrollView.showsHorizontalScrollIndicator = NO;
     _scrollView.showsVerticalScrollIndicator = NO;
 //    _scrollView.alwaysBounceVertical = NO;
 //    _scrollView.bounces = NO;
-    _scrollView.pagingEnabled = NO;
+    _scrollView.pagingEnabled = YES;
     [self addSubview:_scrollView];//在父视图上添加
     [self bringDataToScrollView];
 }
@@ -100,15 +100,6 @@ NS_ASSUME_NONNULL_END
         UIView * view1 = [_views objectAtIndex:i - 1];
         view1.frame = CGRectMake(i * ScrollWidth, 0, ScrollWidth, ScrollHeight);
         [_scrollView addSubview:view1];
-    }
-    
-    //添加最后一个视图
-    UIView * lastView = [_views firstObject];
-    lastView.frame = CGRectMake(ScrollWidth*(_views.count +1), 0, ScrollWidth, ScrollHeight);
-    [_scrollView addSubview:lastView];
-
-    for (UIView *view in _views) {
-        NSLog(NSStringFromCGRect(view.frame));
     }
 }
 
@@ -129,54 +120,69 @@ NS_ASSUME_NONNULL_END
 #pragma mark - UIScrollView Delegate
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-//    //获得偏移量
-//    CGPoint point = _scrollView.contentOffset;
-//    //获得当前的最大x值(在可见区域内，最大的x轴上的值)
-//    CGFloat manX = ScrollWidth * _views.count;
-//    
-//    //到达切换页
-//    if (point.x == 0 || point.x == (ScrollWidth * (_views.count - 1)))
-//    {
-//        [_views lastObject].frame = CGRectMake(manX, 0, ScrollWidth, ScrollHeight);
-//        [_scrollView addSubview:[_views lastObject]];
-//        
-//        if (point.x == 0)
-//        {
-//            [_scrollView setContentOffset:CGPointMake(manX, 0)];//立马跳到倒数第二张(因为最后一张是为了往后滚动做的铺垫视图)
+    //获得偏移量
+    CGPoint point = _scrollView.contentOffset;
+    //获得当前的最大x值(在可见区域内，最大的x轴上的值)
+    CGFloat manX = ScrollWidth * _views.count;
+
+    //到达切换页
+    if (point.x == 0 || point.x == (ScrollWidth * (_views.count - 1)))
+    {
+        NSLog(@"point x:%f 到达切换页",point.x);
+
+        [_views lastObject].frame = CGRectMake(manX, 0, ScrollWidth, ScrollHeight);
+//        if (![_scrollView.subviews containsObject:[_views lastObject]]) {
+            [_scrollView addSubview:[_views lastObject]];
 //        }
-//    }
-//    
-//    //如果当前点到达第一张，即坐标为x,0
-//    if (point.x == ScrollWidth)
-//    {
-//        //移动视图
-//        [_views lastObject].frame = CGRectMake(0, 0, ScrollWidth, ScrollHeight);
-//        [_scrollView addSubview:[_views lastObject]];
-//        
-//    }
-//    
-//    
-//    if (point.x == manX)
-//    {
-//        //移动视图
-//        [_views firstObject].frame = CGRectMake(manX + ScrollWidth, 0, ScrollWidth, ScrollHeight);
-//        [_scrollView addSubview:[_views firstObject]];
-//    }
-//    
-//    if (point.x == 2 * ScrollWidth || point.x == (manX + ScrollWidth))
-//    {
-//        [_views firstObject].frame = CGRectMake(ScrollWidth, 0, ScrollWidth, ScrollHeight);
-//        [_scrollView addSubview:[_views firstObject]];
-//        
-//        if (point.x == (manX + ScrollWidth))
-//        {
-//            //滚动
-//            [_scrollView setContentOffset:CGPointMake(ScrollWidth, 0)];
+        if (point.x == 0)
+        {
+            NSLog(@"point x:%f point.x == 0立马跳到倒数第二张",point.x);
+
+            [_scrollView setContentOffset:CGPointMake(manX, 0)];//立马跳到倒数第二张(因为最后一张是为了往后滚动做的铺垫视图)
+        }
+    }
+    
+    //如果当前点到达第一张，即坐标为x,0
+    if (point.x == ScrollWidth)
+    {
+        NSLog(@"point x:%f 到达第一张",point.x);
+
+        //移动视图
+        [_views lastObject].frame = CGRectMake(0, 0, ScrollWidth, ScrollHeight);
+//        if (![_scrollView.subviews containsObject:[_views lastObject]]) {
+            [_scrollView addSubview:[_views lastObject]];
 //        }
-//    }
-//    
-//    
-//    //设置pageControl的点数
+    }
+    
+    
+    if (point.x == manX)
+    {
+    NSLog(@"point x:%f 移动视图",point.x);
+        //移动视图
+        [_views firstObject].frame = CGRectMake(manX + ScrollWidth, 0, ScrollWidth, ScrollHeight);
+//        if (![_scrollView.subviews containsObject:[_views lastObject]]) {
+            [_scrollView addSubview:[_views lastObject]];
+//        }
+    }
+    // 这是要干啥？
+    if (point.x == 2 * ScrollWidth || point.x == (manX + ScrollWidth))
+    {
+        [_views firstObject].frame = CGRectMake(ScrollWidth, 0, ScrollWidth, ScrollHeight);
+//        if (![_scrollView.subviews containsObject:[_views lastObject]]) {
+            [_scrollView addSubview:[_views lastObject]];
+//        }
+        NSLog(@"point x:%f 这是要干啥？",point.x);
+        if (point.x == (manX + ScrollWidth))
+        {
+            //滚动
+            NSLog(@"point x:%f 这是要干啥？滚动",point.x);
+
+            [_scrollView setContentOffset:CGPointMake(ScrollWidth, 0)];
+        }
+    }
+    
+//    NSLog(@"scrollview subviews:%d",_scrollView.subviews.count);
+    //设置pageControl的点数
 //    NSInteger pageNumber = [self pageIndexWithContentOffset:scrollView.contentOffset];//自定义方法，根据偏移量设置当前页码
 //    self.pageControl.currentPage = pageNumber;
 }
@@ -190,7 +196,7 @@ NS_ASSUME_NONNULL_END
 
 -(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
-    _timer = [NSTimer scheduledTimerWithTimeInterval:_timeInteval target:self selector:@selector(changeView) userInfo:nil repeats:YES];
+//    _timer = [NSTimer scheduledTimerWithTimeInterval:_timeInteval target:self selector:@selector(changeView) userInfo:nil repeats:YES];
 }
 
 
