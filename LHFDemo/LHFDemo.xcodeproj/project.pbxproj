@@ -29,6 +29,8 @@
 		37BF3C901BE75B2300CFB19A /* LHFDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BF3C8F1BE75B2300CFB19A /* LHFDemoUITests.m */; };
 		37BF3C9F1BE75B5300CFB19A /* RootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BF3C9E1BE75B5300CFB19A /* RootTableViewController.m */; };
 		37C3AE191D78251900BC9ECA /* BlockTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C3AE181D78251900BC9ECA /* BlockTestViewController.m */; };
+		37CEE48C1E90CB7800A3423C /* background_image_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37CEE4891E90CB7800A3423C /* background_image_default@2x.png */; };
+		37CEE48D1E90CB7800A3423C /* ScottPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CEE48B1E90CB7800A3423C /* ScottPageView.m */; };
 		37E854EF1E0BA4BE00E2F48C /* TextTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E854EE1E0BA4BE00E2F48C /* TextTestViewController.m */; };
 		37E854F21E0BB6D300E2F48C /* SXFontShowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E854F11E0BB6D300E2F48C /* SXFontShowVC.m */; };
 		C3DC7D9CFC12344610D1C86E /* libPods-LHFDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DCC8B91FB3D7C29B594B59 /* libPods-LHFDemo.a */; };
@@ -92,6 +94,9 @@
 		37BF3C9E1BE75B5300CFB19A /* RootTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTableViewController.m; sourceTree = "<group>"; };
 		37C3AE171D78251900BC9ECA /* BlockTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockTestViewController.h; sourceTree = "<group>"; };
 		37C3AE181D78251900BC9ECA /* BlockTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockTestViewController.m; sourceTree = "<group>"; };
+		37CEE4891E90CB7800A3423C /* background_image_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background_image_default@2x.png"; sourceTree = "<group>"; };
+		37CEE48A1E90CB7800A3423C /* ScottPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScottPageView.h; sourceTree = "<group>"; };
+		37CEE48B1E90CB7800A3423C /* ScottPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScottPageView.m; sourceTree = "<group>"; };
 		37E854ED1E0BA4BE00E2F48C /* TextTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextTestViewController.h; sourceTree = "<group>"; };
 		37E854EE1E0BA4BE00E2F48C /* TextTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextTestViewController.m; sourceTree = "<group>"; };
 		37E854F01E0BB6D300E2F48C /* SXFontShowVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXFontShowVC.h; sourceTree = "<group>"; };
@@ -190,6 +195,7 @@
 		37BF3C691BE75B2300CFB19A /* LHFDemo */ = {
 			isa = PBXGroup;
 			children = (
+				37CEE4881E90CB7800A3423C /* ScottPageView */,
 				3797D3B41E8F5E4000B841AF /* CCCycleScrollView */,
 				37436AF91E8919E90033ECF7 /* RecyleSliderVIew */,
 				37BF3C6D1BE75B2300CFB19A /* AppDelegate.h */,
@@ -243,6 +249,16 @@
 				37BF3C911BE75B2300CFB19A /* Info.plist */,
 			);
 			path = LHFDemoUITests;
+			sourceTree = "<group>";
+		};
+		37CEE4881E90CB7800A3423C /* ScottPageView */ = {
+			isa = PBXGroup;
+			children = (
+				37CEE4891E90CB7800A3423C /* background_image_default@2x.png */,
+				37CEE48A1E90CB7800A3423C /* ScottPageView.h */,
+				37CEE48B1E90CB7800A3423C /* ScottPageView.m */,
+			);
+			path = ScottPageView;
 			sourceTree = "<group>";
 		};
 		FF24E2DBFEBF0BB5C7DACAC7 /* Pods */ = {
@@ -369,6 +385,7 @@
 			files = (
 				3797D3C01E8F5E4800B841AF /* cycle_image3.png in Resources */,
 				37BF3C7A1BE75B2300CFB19A /* LaunchScreen.storyboard in Resources */,
+				37CEE48C1E90CB7800A3423C /* background_image_default@2x.png in Resources */,
 				3797D3C21E8F5E4800B841AF /* cycle_image5.png in Resources */,
 				3797D3C11E8F5E4800B841AF /* cycle_image4.png in Resources */,
 				37BF3C771BE75B2300CFB19A /* Assets.xcassets in Resources */,
@@ -506,6 +523,7 @@
 				37436AFF1E891A050033ECF7 /* LHFRecycleSliderViewController.m in Sources */,
 				3797D3B71E8F5E4000B841AF /* CCCycleScrollView.m in Sources */,
 				37E854EF1E0BA4BE00E2F48C /* TextTestViewController.m in Sources */,
+				37CEE48D1E90CB7800A3423C /* ScottPageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
