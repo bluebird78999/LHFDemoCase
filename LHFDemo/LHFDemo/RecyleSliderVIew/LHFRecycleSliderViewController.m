@@ -63,7 +63,7 @@
 
     //轮播demo 3
     NSMutableArray *picArrs = [[NSMutableArray alloc] init];
-    for (NSInteger i = 1; i <= 3; ++i) {
+    for (NSInteger i = 1; i <= 2; ++i) {
         UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"cycle_image%ld",(long)i]];
         [picArrs addObject:image];
     }

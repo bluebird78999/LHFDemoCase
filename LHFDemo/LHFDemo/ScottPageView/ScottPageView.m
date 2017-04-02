@@ -30,10 +30,6 @@ typedef NS_ENUM(NSInteger, Direction) {
 @property (nonatomic, assign) Direction direction;
 // 提示信息
 @property (nonatomic, strong) UILabel *noticeLabel;
-// 显示的imageView
-@property (nonatomic, strong) UIImageView *currentImageView;
-// 即将要显示的imageView
-@property (nonatomic, strong) UIImageView *nextImageView;
 // 当前显示的索引
 @property (nonatomic, assign) NSInteger currentIndex;
 // 将要显示的索引
@@ -44,6 +40,10 @@ typedef NS_ENUM(NSInteger, Direction) {
 @property (nonatomic, strong) NSTimer *timer;
 // 任务队列
 @property (nonatomic, strong) NSOperationQueue *queue;
+//滚动的view
+@property (nonatomic, strong) NSMutableArray *views;
+@property (nonatomic, assign) CGRect currentItemFrame;
+@property (nonatomic, assign) CGRect nextItemFrame;
 
 @end
 
@@ -103,15 +103,6 @@ typedef NS_ENUM(NSInteger, Direction) {
         _scrollView.showsHorizontalScrollIndicator = NO;
         _scrollView.showsVerticalScrollIndicator = NO;
         _scrollView.delegate = self;
-        
-        _currentImageView = [[UIImageView alloc] init];
-        _currentImageView.userInteractionEnabled = YES;
-        [_currentImageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageClick)]];
-        [_scrollView addSubview:_currentImageView];
-        
-        _nextImageView = [[UIImageView alloc] init];
-        [_scrollView addSubview:_nextImageView];
-        
         [self addSubview:_scrollView];
     }
     return _scrollView;
@@ -141,6 +132,11 @@ typedef NS_ENUM(NSInteger, Direction) {
     return _pageControl;
 }
 
+- (void)dealloc
+{
+    [self stopTimer];
+    _timer = nil;
+}
 #pragma mark - 构造方法
 - (instancetype)initWithImageArr:(NSArray *)imageArr {
     return [self initWithImageArr:imageArr andImageClickBlock:nil];
@@ -155,8 +151,11 @@ typedef NS_ENUM(NSInteger, Direction) {
 
 - (instancetype)initWithImageArr:(NSArray *)imageArr andImageClickBlock:(ClickBlock)clickBlock {
     if (self = [super init]) {
+        self.views = [[NSMutableArray alloc] init];
         self.imageArr = imageArr;
         self.imageClickBlock = clickBlock;
+        self.currentItemFrame = CGRectMake(self.width, 0, self.width, self.height);
+        self.nextItemFrame = CGRectMake(self.width * 2, 0, self.width, self.height);
     }
     return self;
 }
@@ -183,28 +182,37 @@ typedef NS_ENUM(NSInteger, Direction) {
     self.descLabel.frame = CGRectMake(0, self.height - 20, self.width, 20);
     self.pageControl.center = CGPointMake(self.width * 0.5, self.height - 10);
     self.noticeLabel.center = CGPointMake(self.width * 0.5, self.height * 0.5);
-    
     _scrollView.contentOffset = CGPointMake(self.width, 0);
-    _currentImageView.frame = CGRectMake(self.width, 0, self.width, self.height);
     [self setScrollViewContentSize];
+}
+
+- (UIView *)getItemAtIndex:(NSInteger)index
+{
+    if (self.views.count > index) {
+        return [self.views objectAtIndex:index];
+    }else{
+        return nil;
+    }
 }
 
 #pragma mark - 设置滚动方向
 - (void)setDirection:(Direction)direction {
+    //变换方向时设置一次各view frame
     if (_direction == direction) return;
     _direction = direction;
     if (_direction == DirectionNone) return;
     
     if (_direction == DirectionRight) { // 如果是向右滚动
-        self.nextImageView.frame = CGRectMake(0, 0, self.width, self.height);
+        self.nextItemFrame = CGRectMake(0, 0, self.width, self.height);
         self.nextIndex = self.currentIndex - 1;
         if (self.nextIndex < 0) self.nextIndex = _images.count - 1;
         
     }else if (_direction == DirectionLeft){ // 如果是向左边滚动
-        self.nextImageView.frame = CGRectMake(CGRectGetMaxX(_currentImageView.frame), 0, self.width, self.height);
+        self.nextItemFrame = CGRectMake(self.width * 2, 0, self.width, self.height);
         self.nextIndex = (self.currentIndex + 1) % _images.count;
     }
-    self.nextImageView.image = self.images[self.nextIndex];
+//    self.nextImageView.image = self.images[self.nextIndex];
+    [self getItemAtIndex:self.nextIndex].frame = self.nextItemFrame;
 }
 
 #pragma mark - 设置图片数组
@@ -223,13 +231,28 @@ typedef NS_ENUM(NSInteger, Direction) {
             [self downloadImages:i];
         }
     }
-    self.currentImageView.image = _images.firstObject;
+    for (UIImage *image in _images) {
+        UIImageView *view = [[UIImageView alloc] initWithImage:image];
+        view.frame = CGRectMake(self.frame.size.width * 3, 0, self.width, self.height);
+        [self.views addObject:view];
+        [self.scrollView addSubview:view];
+    }
+    
     self.currentIndex = 0;
     self.pageControl.currentPage = 0;
     self.pageControl.numberOfPages = _images.count;
     [self setScrollViewContentSize];
 }
 
+- (void)resetViewsFrame
+{
+    for (int i = 0; i < self.views.count; i++) {
+        UIView *view = [self.views objectAtIndex:i];
+        if (i != self.currentIndex && i != self.nextIndex) {
+            view.frame = view.frame = CGRectMake(self.frame.size.width * 3, 0, self.width, self.height);;
+        }
+    }
+}
 #pragma mark - 设置图片描述数组
 - (void)setDescribeArray:(NSArray *)describeArray {
     _describeArray = describeArray;
@@ -251,7 +274,7 @@ typedef NS_ENUM(NSInteger, Direction) {
 
 #pragma mark - 设置scrollView的contentSize
 - (void)setScrollViewContentSize {
-    if (_images.count > 1) {
+    if (self.views.count > 1) {
         self.scrollView.contentSize = CGSizeMake(self.width * 3, 0);
         [self startTimer];
     } else {
@@ -345,7 +368,7 @@ typedef NS_ENUM(NSInteger, Direction) {
             self.images[index] = image;
             // 如果下载的图片为当前需要显示的图片，直接到主线程给imageView赋值，否则需要等到下一轮才会显示
             if (_currentIndex == index) {
-                [_currentImageView performSelectorOnMainThread:@selector(setImage:) withObject:image waitUntilDone:NO];
+                [[self getItemAtIndex:self.currentIndex] performSelectorOnMainThread:@selector(setImage:) withObject:image waitUntilDone:NO];
             }
             [data writeToFile:path atomically:YES];
         }
@@ -394,9 +417,9 @@ typedef NS_ENUM(NSInteger, Direction) {
 
     self.currentIndex = self.nextIndex;
     self.pageControl.currentPage = self.currentIndex;
-    self.currentImageView.frame = CGRectMake(self.width, 0, self.width, self.height);
+    [self getItemAtIndex:self.nextIndex].frame = CGRectMake(self.width, 0, self.width, self.height);
+    [self resetViewsFrame];
     self.descLabel.text = self.describeArray[self.currentIndex];
-    self.currentImageView.image = self.nextImageView.image;
     self.scrollView.contentOffset = CGPointMake(self.width, 0);
 }
 
