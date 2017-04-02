@@ -41,7 +41,7 @@ typedef NS_ENUM(NSInteger, Direction) {
 // 任务队列
 @property (nonatomic, strong) NSOperationQueue *queue;
 //滚动的view
-@property (nonatomic, strong) NSMutableArray *views;
+@property (nonatomic, strong) NSMutableArray *itemViews;
 @property (nonatomic, assign) CGRect currentItemFrame;
 @property (nonatomic, assign) CGRect nextItemFrame;
 
@@ -156,8 +156,8 @@ typedef NS_ENUM(NSInteger, Direction) {
         self.nextItemFrame = CGRectMake(self.width * 2, 0, self.width, self.height);
         self.pageControl.currentPage = 0;
         self.pageControl.numberOfPages = _images.count;
-        self.views = [[NSMutableArray alloc] init];
-        [self addViews];
+        self.itemViews = [[NSMutableArray alloc] init];
+        [self additemViews];
         [self setScrollViewContentSize];
 
     }
@@ -192,8 +192,8 @@ typedef NS_ENUM(NSInteger, Direction) {
 
 - (UIView *)getItemAtIndex:(NSInteger)index
 {
-    if (self.views.count > index) {
-        return [self.views objectAtIndex:index];
+    if (self.itemViews.count > index) {
+        return [self.itemViews objectAtIndex:index];
     }else{
         return nil;
     }
@@ -237,21 +237,21 @@ typedef NS_ENUM(NSInteger, Direction) {
     }
 }
 
-- (void)addViews
+- (void)additemViews
 {
     for (UIImage *image in _images) {
         UIImageView *view = [[UIImageView alloc] initWithImage:image];
         view.frame = CGRectMake(self.frame.size.width * 3, 0, self.width, self.height);
-        [self.views addObject:view];
+        [self.itemViews addObject:view];
         [self.scrollView addSubview:view];
     }
     [self getItemAtIndex:self.currentIndex].frame = self.currentItemFrame;
 }
 
-- (void)resetViewsFrame
+- (void)resetitemViewsFrame
 {
-    for (int i = 0; i < self.views.count; i++) {
-        UIView *view = [self.views objectAtIndex:i];
+    for (int i = 0; i < self.itemViews.count; i++) {
+        UIView *view = [self.itemViews objectAtIndex:i];
         if (i != self.currentIndex && i != self.nextIndex) {
             view.frame = view.frame = CGRectMake(self.frame.size.width * 3, 0, self.width, self.height);;
         }
@@ -278,7 +278,7 @@ typedef NS_ENUM(NSInteger, Direction) {
 
 #pragma mark - 设置scrollView的contentSize
 - (void)setScrollViewContentSize {
-    if (self.views.count > 1) {
+    if (self.itemViews.count > 1) {
         self.scrollView.contentSize = CGSizeMake(self.width * 3, 0);
         [self startTimer];
     } else {
@@ -422,7 +422,7 @@ typedef NS_ENUM(NSInteger, Direction) {
     self.currentIndex = self.nextIndex;
     self.pageControl.currentPage = self.currentIndex;
     [self getItemAtIndex:self.nextIndex].frame = CGRectMake(self.width, 0, self.width, self.height);
-    [self resetViewsFrame];
+    [self resetitemViewsFrame];
     self.descLabel.text = self.describeArray[self.currentIndex];
     self.scrollView.contentOffset = CGPointMake(self.width, 0);
 }
