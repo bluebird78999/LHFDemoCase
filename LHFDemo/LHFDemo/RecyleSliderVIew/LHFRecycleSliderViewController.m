@@ -74,10 +74,10 @@
         [desArr addObject:tempDesc];
     }
 
-    ScottPageView *pageViewCode = [ScottPageView pageViewWithImageArr:picArrs andImageClickBlock:^(NSInteger index) {
+    ScottPageView *pageViewCode = [[ScottPageView alloc] initWithImageArr:picArrs andImageClickBlock:^(NSInteger index) {
         NSLog(@"点击代码创建的第%ld张图片",index+1);
-    }];
-    pageViewCode.frame = CGRectMake(0, 64, self.view.frame.size.width, 180);
+    }  frame:CGRectMake(0, 64, self.view.frame.size.width, 180)];
+//    pageViewCode.frame = CGRectMake(0, 64, self.view.frame.size.width, 180);
     pageViewCode.describeArray = desArr;
     pageViewCode.time = 1;
     [self.view addSubview:pageViewCode];

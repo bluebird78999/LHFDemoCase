@@ -53,7 +53,7 @@ typedef void(^ClickBlock)(NSInteger index);
  */
 - (instancetype)initWithImageArr:(NSArray *)imageArr;
 - (instancetype)initWithImageArr:(NSArray *)imageArr andDescArr:(NSArray *)descArr;
-- (instancetype)initWithImageArr:(NSArray *)imageArr andImageClickBlock:(ClickBlock)clickBlock;
+- (instancetype)initWithImageArr:(NSArray *)imageArr andImageClickBlock:(ClickBlock)clickBlock frame:(CGRect)frame;
 
 + (instancetype)pageViewWithImageArr:(NSArray *)imageArr;
 + (instancetype)pageViewWithImageArr:(NSArray *)imageArr andDescArr:(NSArray *)descArr;

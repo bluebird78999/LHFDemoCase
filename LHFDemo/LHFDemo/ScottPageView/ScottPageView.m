@@ -138,9 +138,7 @@ typedef NS_ENUM(NSInteger, Direction) {
     _timer = nil;
 }
 #pragma mark - 构造方法
-- (instancetype)initWithImageArr:(NSArray *)imageArr {
-    return [self initWithImageArr:imageArr andImageClickBlock:nil];
-}
+
 
 - (instancetype)initWithImageArr:(NSArray *)imageArr andDescArr:(NSArray *)descArr {
     if (self = [self initWithImageArr:imageArr]) {
@@ -149,13 +147,19 @@ typedef NS_ENUM(NSInteger, Direction) {
     return self;
 }
 
-- (instancetype)initWithImageArr:(NSArray *)imageArr andImageClickBlock:(ClickBlock)clickBlock {
-    if (self = [super init]) {
-        self.views = [[NSMutableArray alloc] init];
+- (instancetype)initWithImageArr:(NSArray *)imageArr andImageClickBlock:(ClickBlock)clickBlock frame:(CGRect)frame{
+    if (self = [super initWithFrame:frame]) {
+        self.currentIndex = 0;
         self.imageArr = imageArr;
         self.imageClickBlock = clickBlock;
         self.currentItemFrame = CGRectMake(self.width, 0, self.width, self.height);
         self.nextItemFrame = CGRectMake(self.width * 2, 0, self.width, self.height);
+        self.pageControl.currentPage = 0;
+        self.pageControl.numberOfPages = _images.count;
+        self.views = [[NSMutableArray alloc] init];
+        [self addViews];
+        [self setScrollViewContentSize];
+
     }
     return self;
 }
@@ -169,7 +173,7 @@ typedef NS_ENUM(NSInteger, Direction) {
 }
 
 + (instancetype)pageViewWithImageArr:(NSArray *)imageArr andImageClickBlock:(ClickBlock)clickBlock {
-    return [[self alloc] initWithImageArr:imageArr andImageClickBlock:clickBlock];
+    return [[self alloc] initWithImageArr:imageArr andImageClickBlock:clickBlock frame:CGRectZero];
 }
 
 
@@ -231,17 +235,17 @@ typedef NS_ENUM(NSInteger, Direction) {
             [self downloadImages:i];
         }
     }
+}
+
+- (void)addViews
+{
     for (UIImage *image in _images) {
         UIImageView *view = [[UIImageView alloc] initWithImage:image];
         view.frame = CGRectMake(self.frame.size.width * 3, 0, self.width, self.height);
         [self.views addObject:view];
         [self.scrollView addSubview:view];
     }
-    
-    self.currentIndex = 0;
-    self.pageControl.currentPage = 0;
-    self.pageControl.numberOfPages = _images.count;
-    [self setScrollViewContentSize];
+    [self getItemAtIndex:self.currentIndex].frame = self.currentItemFrame;
 }
 
 - (void)resetViewsFrame
